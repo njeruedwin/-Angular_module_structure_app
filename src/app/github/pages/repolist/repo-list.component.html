@@ -31,7 +31,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="repo; in: repos">
+      <tr *ngFor="let repo of repos">
         <td>{{ repo.id }}</td>
         <td>{{ repo.name }}</td>
         <td>{{ repo.html_url }}</td>

@@ -6,7 +6,7 @@ import { repos } from '../models';
 
 @Injectable()
 export class GitHubService {
-  baseUrl: string = 'htps://api.github.com/';
+  baseUrl: string = 'https://api.github.com/';
 
   constructor(private http: HttpClient) {}
 

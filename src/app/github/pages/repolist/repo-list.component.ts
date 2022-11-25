@@ -19,14 +19,14 @@ export class RepoListComponent {
   public getRepos() {
     this.loading = true;
     this.errorMessage = '';
-    this.githubService.getRepos(this.userName).subscribe(
-      (response) => {
+    this.githubService.getRepos(this.userName).subscribe({
+      complete: () => {},
+      error: () => {
+        this.errorMessage;
+      },
+      next: (response) => {
         this.repos = response;
       },
-      (error) => {
-        this.errorMessage = error;
-        this.loading = false;
-      }
-    );
+    });
   }
 }
